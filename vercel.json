@@ -9,7 +9,7 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "client/build"
+        "distDir": "build"
       }
     }
   ],
@@ -22,5 +22,9 @@
       "src": "/(.*)",
       "dest": "/client/$1"
     }
-  ]
+  ],
+  "regions": ["iad1"], // Replace with the desired region (e.g., "iad1", "sfo1")
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
