@@ -1,0 +1,17 @@
+{
+  "name": "sync-music-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install": "npm install --prefix client && npm install --prefix server",
+    "start": "npm run start:server & npm run start:client",
+    "start:server": "npm start --prefix server",
+    "start:client": "npm start --prefix client",
+    "build": "npm run build:client",
+    "build:client": "npm run build --prefix client",
+    "deploy": "vercel"
+  },
+  "devDependencies": {
+    "vercel": "^28.0.0"
+  }
+}
